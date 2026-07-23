@@ -1,0 +1,60 @@
+:root {
+    // ===== Cores =====
+
+    //(fundos/superfícies)
+    --color-paper-50: #fdfbf7;
+    --color-paper-100: #f5f0e6;
+    --color-paper-200: #e8dfc9;
+
+    //(texto)
+    --color-ink-900: #241f1a;
+    --color-ink-700: #4a4137;
+    --color-ink-500: #79695c;
+    --color-ink-300: #a89a85;
+
+    //(destaques)
+    --color-brass-600: #9c7a3c;
+    --color-brass-500: #b8934f;
+    --color-brass-400: #d1af73;
+
+    //danger
+    --color-danger-600: #a93226;
+    --color-danger-500: #c0392b;
+    --color-danger-400: #e05a4a;
+
+
+    // Semânticas
+    --color-bg: var(--color-paper-50);
+    --color-surface: var(--color-paper-100);
+    --color-border: var(--color-paper-200);
+    --color-text-primary: var(--color-ink-900);
+    --color-text-secondary: var(--color-ink-500);
+    --color-accent: var(--color-brass-500);
+    --color-accent-hover: var(--color-brass-600);
+    --color-danger: var(--color-danger-500);
+    --color-danger-hover: var(--color-danger-600);
+
+    //  Tipografia 
+    --font-display: 'Fraunces', serif; // títulos
+    --font-body: 'Manrope', sans-serif; // corpo de texto
+    --font-mono: 'IBM Plex Mono', monospace; // dados
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.75rem;
+    --font-size-2xl: 2.5rem;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    // Espaçamento
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 2rem;
+    --space-6: 3rem;
+}

@@ -1,0 +1,66 @@
+.page {
+    padding: var(--space-6);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.group {
+    margin-bottom: var(--space-5);
+}
+
+.swatchRow {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.swatchColor {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.swatchLabel {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
+
+.fontSample {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-3);
+}
+
+.spacingList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.spacingRow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.spacingLabel {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.spacingBar {
+    height: 16px;
+    background-color: var(--color-accent);
+    border-radius: 4px;
+}
