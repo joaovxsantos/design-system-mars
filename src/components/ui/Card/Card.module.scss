@@ -1,0 +1,35 @@
+.card {
+    background-color: var(--color-paper-50);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.sm {
+    padding: var(--space-2);
+}
+
+.md {
+    padding: var(--space-4);
+}
+
+.lg {
+    padding: var(--space-5);
+}
+
+// adicionar no Card.module.scss
+.cardHeader {
+    margin-bottom: var(--space-2);
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-bold);
+}
+
+.cardBody {
+    color: var(--color-text-secondary);
+}
+
+.cardFooter {
+    margin-top: var(--space-3);
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--color-border);
+}
