@@ -6,7 +6,7 @@ export default function ButtonDocsPage() {
         <main className={styles.page}>
             <h1 className={styles.title}>Button</h1>
 
-            <section>
+            <section className={styles.section}>
                 <h2>Variantes</h2>
                 <div className={styles.row}>
                     <Button variant="primary">Primary</Button>
@@ -16,7 +16,7 @@ export default function ButtonDocsPage() {
                 </div>
             </section>
 
-            <section>
+            <section className={styles.section}>
                 <h2>Tamanhos</h2>
                 <div className={styles.row}>
                     <Button size="sm">Small</Button>
@@ -25,10 +25,16 @@ export default function ButtonDocsPage() {
                 </div>
             </section>
 
-            <section>
+            <section className={styles.section}>
                 <h2>Estado desabilitado</h2>
                 <div className={styles.row}>
                     <Button disabled>Disabled</Button>
+                </div>
+            </section>
+            <section className={styles.section}>
+                <h2>Loading</h2>
+                <div className={styles.row}>
+                    <Button isLoading size='md'>Loading</Button>
                 </div>
             </section>
         </main>

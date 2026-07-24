@@ -1,4 +1,8 @@
 .button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--font-body);
     font-weight: var(--font-weight-medium);
     border: none;
@@ -62,4 +66,24 @@
 .lg {
     padding: var(--space-3) var(--space-4);
     font-size: var(--font-size-lg);
+}
+
+.spinner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+.hiddenText {
+    opacity: 0;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }

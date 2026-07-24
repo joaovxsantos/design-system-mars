@@ -10,12 +10,15 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: ButtonVariant;
     size?: ButtonSize;
     children: ReactNode;
+    isLoading?: boolean;
 }
 
 export function Button(
     {
         variant = "primary",
         size = "sm",
+        isLoading = false,
+        disabled,
         children,
         className,
         ...props
@@ -24,9 +27,12 @@ export function Button(
     return (
         <button
             className={`${styles.button} ${styles[variant]} ${styles[size]} ${className ?? ''} `}
+            disabled={disabled || isLoading}
+            aria-busy={isLoading}
             {...props}
         >
-            {children}
+            {isLoading && <span className={styles.spinner} aria-hidden={true}></span>}
+            <span className={isLoading ? styles.hiddenText : undefined}>{children}</span>
         </button>
     )
 }
