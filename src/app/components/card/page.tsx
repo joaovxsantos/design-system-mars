@@ -5,16 +5,14 @@ import styles from '../button/button-docs.module.scss';
 export default function CardDocsPage() {
     return (
         <main className={styles.page}>
-            <h1>Card</h1>
-
+            <h1 className={styles.h1}>Card</h1>
             <section>
-                <h2>Básico</h2>
                 <div className={styles.row}>
-                    <Card>
-                        <CardHeader>Título do card</CardHeader>
-                        <CardBody>Um texto descritivo qualquer dentro do card.</CardBody>
+                    <Card variant="interactive" padding="md">
+                        <CardHeader>Tênis Runner Pro</CardHeader>
+                        <CardBody>Leve, respirável, ideal pra corridas de longa distância.</CardBody>
                         <CardFooter>
-                            <Button size="lg">Ação</Button>
+                            <Button size="sm">Adicionar ao carrinho</Button>
                         </CardFooter>
                     </Card>
                 </div>

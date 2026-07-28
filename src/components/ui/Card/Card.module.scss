@@ -1,35 +1,89 @@
 .card {
-    background-color: var(--color-paper-50);
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  position: relative;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 2px; // quase reto, não o "rounded card" padrão
+  transition: border-color 0.2s ease;
 }
 
-.sm {
-    padding: var(--space-2);
+.sm { padding: var(--space-2) var(--space-3); }
+.md { padding: var(--space-3) var(--space-4); }
+.lg { padding: var(--space-4) var(--space-5); }
+
+.elevated {
+  // em vez de sombra, um traço superior em brass — like uma lombada de livro
+  border-top: 2px solid var(--color-accent);
 }
 
-.md {
-    padding: var(--space-4);
+.clickable:hover {
+  border-color: var(--color-ink-300);
 }
 
-.lg {
-    padding: var(--space-5);
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
 }
 
-// adicionar no Card.module.scss
 .cardHeader {
-    margin-bottom: var(--space-2);
-    font-family: var(--font-display);
-    font-weight: var(--font-weight-bold);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  display: inline-block;
+  position: relative;
+
+  // o sinal de interatividade: sublinhado que desenha da esquerda pra direita
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-accent);
+    transition: width 0.25s ease;
+  }
+}
+
+.clickable:hover .cardHeader::after {
+  width: 100%;
 }
 
 .cardBody {
-    color: var(--color-text-secondary);
+  margin-top: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
 }
 
 .cardFooter {
-    margin-top: var(--space-3);
-    padding-top: var(--space-2);
-    border-top: 1px solid var(--color-border);
+  position: relative;
+  z-index: 2;
+  margin-top: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+}
+
+.stretchedLink {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }

@@ -4,6 +4,13 @@
   margin: 0 auto;
 }
 
+.h1,
+.h2 {
+  margin-bottom: 20px;
+}
+
+
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
