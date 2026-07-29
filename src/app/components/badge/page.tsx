@@ -23,6 +23,5 @@ export default function BadgeDocsPage() {
                 </div>
             </section>
         </div>
-
     )
 }

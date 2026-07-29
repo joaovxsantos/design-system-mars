@@ -9,7 +9,7 @@ type ButtonSize = 'sm' | 'md' | 'lg';
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: ButtonVariant;
     size?: ButtonSize;
-    children: ReactNode;
+    children?: ReactNode;
     isLoading?: boolean;
 }
 
