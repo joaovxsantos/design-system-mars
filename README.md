@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Design System
 
-## Getting Started
+Um sistema de tokens e componentes reutilizáveis, construído como peça de portfolio, documentado como uma ficha de catálogo, onde cada componente carrega sua referência, suas variações e o raciocínio por trás das decisões técnicas.
 
-First, run the development server:
+🔗 [Demo ao vivo](#) · 🔗 [Portfolio](#)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack
+
+- **Next.js** (App Router) + **TypeScript**
+- **SCSS Modules** para estilização
+- **CSS Custom Properties** para tokens e tema (light/dark)
+- [`lucide-react`](https://lucide.dev) para ícones
+
+## Identidade visual
+
+Em vez de seguir o padrão genérico de UI kit (cards arredondados, sombra + elevação no hover, badges em pill colorido), este design system adota uma linguagem **editorial/arquivo**, inspirada em fichas de catálogo e etiquetas de museu:
+
+- Cantos retos ou quase retos, bordas finas em vez de sombra pesada
+- Tipografia mista: **Fraunces** (serifada, itálico) para títulos, **Manrope** para corpo, **IBM Plex Mono** para metadados (referências, preços, labels de estado)
+- Sinal de interatividade via sublinhado animado ou traço de cor, não elevação/`translateY`
+- Paleta **paper / ink / brass**: tons de papel envelhecido, tinta escura e um dourado como cor de destaque
+
+## Estrutura
+
+```
+src/
+├── app/
+│   ├── page.tsx              → home / índice do catálogo
+│   ├── globals.scss          → reset + import dos tokens
+│   ├── tokens/                → páginas de cor, tipografia, espaçamento
+│   └── components/            → uma rota de documentação por componente
+│
+├── components/
+│   ├── ui/                    → os componentes reais (Button, Input, Card...)
+│   └── theme/                 → ThemeProvider e toggle de dark mode
+│
+└── styles/
+    └── tokens.scss             → variáveis de cor, fonte e espaçamento
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rodando localmente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Abre em `http://localhost:3000`.
 
-## Learn More
+## Componentes
 
-To learn more about Next.js, take a look at the following resources:
+| Componente           | Descrição                                                                                                |
+| -------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Button**           | Variantes primary/secondary/ghost/danger, tamanhos, estado de loading com spinner acessível              |
+| **Input**            | Label, erro, sucesso, ícone, toggle de senha funcional, contador de caracteres, tamanhos                 |
+| **Card**             | Composição com Header/Body/Footer, variante clicável via _stretched link_ (não `role="button"` numa div) |
+| **Badge**            | Indicador de status em estilo "selo/carimbo"                                                             |
+| **Modal**            | Portal, focus trap, restauração de foco, fecha com ESC                                                   |
+| **Select**           | Dropdown customizado com navegação completa por teclado (setas, Home/End, ESC)                           |
+| **Checkbox / Radio** | Input nativo escondido + visual customizado via `:checked`, mantendo acessibilidade nativa               |
+| **Toast**            | Sistema de notificação via Context + Portal, auto-dismiss + fechamento manual                            |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Decisões técnicas relevantes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Tokens separados em "crus" e "semânticos"** — cores
