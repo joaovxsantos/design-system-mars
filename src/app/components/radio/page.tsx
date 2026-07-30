@@ -1,8 +1,8 @@
 'use client'
-import { Radio } from '@/src/components/Radio/Radio';
+import { Radio } from '@/src/components/ui/Radio/Radio';
 import styles from '../button/button-docs.module.scss';
 import { useState } from 'react';
-import { RadioGroup } from '@/src/components/Radio/RadioGroup';
+import { RadioGroup } from '@/src/components/ui/Radio/RadioGroup';
 
 export default function RadiosDocs() {
     const [shipping, setShipping] = useState('standard');

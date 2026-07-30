@@ -1,4 +1,4 @@
-import { Checkbox } from '@/src/components/Checkbox/Checkbox';
+import { Checkbox } from '@/src/components/ui/Checkbox/Checkbox';
 import styles from '../button/button-docs.module.scss';
 
 

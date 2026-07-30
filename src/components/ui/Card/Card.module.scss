@@ -37,7 +37,6 @@
   display: inline-block;
   position: relative;
 
-  // o sinal de interatividade: sublinhado que desenha da esquerda pra direita
   &::after {
     content: '';
     position: absolute;

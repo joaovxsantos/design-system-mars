@@ -9,7 +9,7 @@ const manrope = Manrope({ subsets: ['latin'], variable: '--font-body' });
 const ibmPlexMono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
-  title: "Design System Saturn",
+  title: "Design System Mars",
 };
 
 export default function RootLayout({
