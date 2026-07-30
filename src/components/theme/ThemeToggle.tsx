@@ -11,12 +11,18 @@ export function ThemeToggle() {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <Button
-            variant="secondary"
-            size={isMobile ? "sm" : "md"}
-            onClick={toggleTheme}
-        >
-            {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
-        </Button>
+        isMobile ?
+            <Button
+                variant="secondary"
+                size="sm"
+                onClick={toggleTheme}
+            >{theme === 'light' ? '🌙' : '☀️'}
+            </Button> :
+            <Button
+                variant="secondary"
+                size="md"
+                onClick={toggleTheme}
+            > {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+            </Button>
     )
 }
