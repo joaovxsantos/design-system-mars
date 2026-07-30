@@ -1,5 +1,8 @@
 import styles from './Components.module.scss';
 import { ReactNode } from 'react';
+import { ArrowLeft } from "lucide-react"
+import { Button } from '../ui/Button/Button';
+import Link from 'next/link';
 
 
 interface ComponentsPageProps {
@@ -11,6 +14,8 @@ interface ComponentsPageProps {
 export function ComponentsPage({ title, allData, column }: ComponentsPageProps) {
     return (
         <main className={styles.page}>
+            <Link href="/">            <Button variant='secondary' className={styles.btnBack}><span><ArrowLeft />Voltar</span></Button>
+            </Link>
             <h1 className={styles.title}>
                 {title}
             </h1>

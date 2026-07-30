@@ -33,6 +33,16 @@
     }
 }
 
+.btnBack {
+    span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    margin-bottom: 32px;
+}
+
 
 @media screen and (min-width: 900px) {
     .page {
