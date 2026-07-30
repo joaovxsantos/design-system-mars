@@ -13,7 +13,8 @@ export default function CheckboxDocs() {
         {
             nameSec: 'CheckBox Escolha',
             items: <>  <Checkbox label='Masculino' />
-                <Checkbox label='Feminino' /></>
+                <Checkbox label='Feminino' /></>,
+            decision: <p>O input nativo fica escondido (não removido) via opacity: 0 e posicionamento absoluto, mantendo foco por teclado e leitura por leitor de tela intactos. O visual customizado (o quadrado com o check) reage ao estado checked via CSS puro, com o seletor de irmão ~, sem precisar de useState — funciona nativamente até em formulários não controlados.</p>
         }
     ]
     return (

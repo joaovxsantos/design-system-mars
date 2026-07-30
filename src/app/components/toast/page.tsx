@@ -16,7 +16,8 @@ export default function ToastDocs() {
         }
         , {
             nameSec: 'Toast Erro',
-            items: <><Button onClick={() => showToast('Erro ao adicionar ao carrinho', 'error')}>Adicionar ao carrinho</Button></>
+            items: <><Button onClick={() => showToast('Erro ao adicionar ao carrinho', 'error')}>Adicionar ao carrinho</Button></>,
+            decision: <p>Usa Context e Portal pra permitir disparar notificação de qualquer componente da app sem prop drilling. Os atributos role="status" e aria-live="polite" anunciam a mensagem pro leitor de tela automaticamente. A borda lateral colorida em vez de fundo sólido mantém a identidade de documento/etiqueta do resto do sistema.</p>
         }
     ]
 

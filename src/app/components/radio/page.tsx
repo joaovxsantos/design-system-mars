@@ -25,7 +25,8 @@ export default function RadiosDocs() {
                     { value: 'standard', label: 'Padrão (5-7 dias)' },
                     { value: 'express', label: 'Expressa (1-2 dias)' },
                 ]}
-            /></>
+            /></>,
+            decision: <p>Segue a mesma técnica do Checkbox — input nativo escondido, visual customizado reagindo ao checked via CSS puro. A diferença fica no RadioGroup, que orquestra o valor selecionado entre várias instâncias de Radio compartilhando o mesmo name, delegando a exclusão mútua ao próprio comportamento nativo do input radio em vez de reimplementar isso em JavaScript.</p>
         }
     ]
     return (

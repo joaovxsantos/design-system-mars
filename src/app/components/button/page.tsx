@@ -21,8 +21,13 @@ export default function ButtonDocsPage() {
         },
         {
             nameSec: 'Loading',
-            items: <><Button isLoading size='md'>Loading</Button></>
-        }
+            items: <><Button isLoading size='md'>Loading</Button></>,
+            decision: <p>
+                Sem prop <code>as</code> polimórfica: decisão de manter tipagem simples em vez de generics condicionais.
+                Em casos de "link com cara de botão", a solução é um componente <code>ButtonLink</code> a parte, sendo
+                mais explícito e com menos superfície de erro.
+            </p>
+        },
     ]
 
     return (

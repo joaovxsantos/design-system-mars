@@ -30,7 +30,8 @@ export default function InputDocsPage() {
             {
                 nameSec: 'Contador de Caracteres',
                 items: <><Input id="bio" label="Bio" maxLength={100} showCharCount placeholder="Fale sobre você" />
-                </>
+                </>,
+                decision: <p>Usa forwardRef porque bibliotecas de formulário (react-hook-form) precisam de acesso direto à ref do elemento nativo pra registrar o campo sem re-render. O toggle de senha usa um button real, não um ícone decorativo, garantindo foco por teclado e leitura correta por leitores de tela.</p>
             },
 
         ]

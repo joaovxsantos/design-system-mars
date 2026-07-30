@@ -13,7 +13,8 @@ export default function CardDocsPage() {
             <CardFooter>
                 <Button size="sm">Adicionar ao carrinho</Button>
             </CardFooter>
-        </Card></>
+        </Card></>,
+        decision: <p>A variante clicável usa a técnica de stretched link (um Link posicionado em inset: 0 dentro do card) em vez de role="button" numa div. Isso garante navegação nativa por teclado, "abrir em nova aba" e semântica correta — sem precisar simular comportamento de botão na mão. O footer recebe z-index maior que o link esticado, pra ações internas (como um botão de compra) continuarem clicáveis independente do link do card.</p>
     }]
 
     return (

@@ -20,7 +20,8 @@ export default function SelectDocs() {
                 { value: 'shoes', label: 'Calçados' },
                 { value: 'accessories', label: 'Acessórios' },
                 { value: 'clothing', label: 'Roupas' },
-            ]} /></>
+            ]} /></>,
+        decision: <p>Segue o padrão ARIA de listbox customizado, com role="listbox" e role="option". A navegação por setas usa um índice de opção ativa desacoplado do hover do mouse, e o menu fecha ao perder foco (Tab) ou clicar fora — replicando o comportamento esperado de um select nativo.</p>
     }]
 
     return (

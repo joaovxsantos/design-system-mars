@@ -16,7 +16,8 @@ export default function BadgeDocsPage() {
             </Badge>
             <Badge variant="danger">
                 Esgotado
-            </Badge></>
+            </Badge></>,
+        decision: <p>Contorno fino e fundo transparente em vez do "pill" colorido sólido — reforça a linguagem de selo/carimbo do sistema, em vez do badge genérico de UI kit.</p>
     }]
 
     return (

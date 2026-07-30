@@ -9,8 +9,9 @@ const componentEntries = [
     { href: '/components/badge', label: 'Badge', id: '04' },
     { href: '/components/modal', label: 'Modal', id: '05' },
     { href: '/components/select', label: 'Select', id: '06' },
-    { href: '/components/checkbox', label: 'Checkbox & Radio', id: '07' },
-    { href: '/components/toast', label: 'Toast', id: '08' },
+    { href: '/components/checkbox', label: 'Checkbox', id: '07' },
+    { href: '/components/radio', label: 'Radio', id: '08' },
+    { href: '/components/toast', label: 'Toast', id: '09' },
 ];
 
 export default function HomePage() {
