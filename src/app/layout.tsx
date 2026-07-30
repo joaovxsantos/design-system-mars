@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Manrope, IBM_Plex_Mono } from "next/font/google";
 import "./globals.scss";
 import { ThemeProvider } from "../components/theme/ThemeProvider";
+import { ToastProvider } from "../components/ui/Toast/ToastProvider";
 import { Nav } from "../components/Nav/Nav";
 
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-display' });
@@ -23,10 +24,12 @@ export default function RootLayout({
       className={`${fraunces.variable} ${manrope.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <ThemeProvider>
-        <body className="min-h-full flex flex-col">
-          <Nav />
-          {children}
-        </body>
+        <ToastProvider>
+          <body className="min-h-full flex flex-col">
+            <Nav />
+            {children}
+          </body>
+        </ToastProvider>
       </ThemeProvider>
     </html>
   );

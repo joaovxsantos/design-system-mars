@@ -2,29 +2,28 @@
 import { useState } from 'react';
 import { Select } from "@/src/components/ui/Select/Select";
 import styles from '../button/button-docs.module.scss';
+import { ComponentsPage } from '@/src/components/ComponentsPage/ComponentsPage';
 
 
 export default function SelectDocs() {
     const [value, setValue] = useState('');
 
-    return (
-        <main className={styles.page}>
-            <h1 className={styles.title}>Select</h1>
+    const allDataSelect = [{
+        nameSec: 'Default Select',
+        items: <><Select
+            id="category"
+            label="Categoria"
+            placeholder="Escolha uma categoria"
+            value={value}
+            onChange={setValue}
+            options={[
+                { value: 'shoes', label: 'Calçados' },
+                { value: 'accessories', label: 'Acessórios' },
+                { value: 'clothing', label: 'Roupas' },
+            ]} /></>
+    }]
 
-            <section className={styles.section}>
-                <Select
-                    id="category"
-                    label="Categoria"
-                    placeholder="Escolha uma categoria"
-                    value={value}
-                    onChange={setValue}
-                    options={[
-                        { value: 'shoes', label: 'Calçados' },
-                        { value: 'accessories', label: 'Acessórios' },
-                        { value: 'clothing', label: 'Roupas' },
-                    ]}
-                />
-            </section>
-        </main>
+    return (
+        <ComponentsPage title='Select' allData={allDataSelect} />
     );
 }

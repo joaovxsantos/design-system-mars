@@ -1,27 +1,25 @@
 import { Badge } from "@/src/components/ui/Badge/Badge";
 import styles from '../button/button-docs.module.scss';
+import { ComponentsPage } from "@/src/components/ComponentsPage/ComponentsPage";
 
 export default function BadgeDocsPage() {
+    const allData = [{
+        nameSec: 'Variantes',
+        items: <> <Badge>
+            Padrão
+        </Badge>
+            <Badge variant="success">
+                Em estoque
+            </Badge>
+            <Badge variant="accent">
+                Destaque
+            </Badge>
+            <Badge variant="danger">
+                Esgotado
+            </Badge></>
+    }]
+
     return (
-        <div className={styles.page}>
-            <h1 className={styles.h1}>Badge</h1>
-            <section className={styles.section}>
-                <h2 className={styles.h2}>Variantes</h2>
-                <div className={styles.row}>
-                    <Badge>
-                        Padrão
-                    </Badge>
-                    <Badge variant="success">
-                        Em estoque
-                    </Badge>
-                    <Badge variant="accent">
-                        Destaque
-                    </Badge>
-                    <Badge variant="danger">
-                        Esgotado
-                    </Badge>
-                </div>
-            </section>
-        </div>
+        <ComponentsPage title="Badge" allData={allData} />
     )
 }

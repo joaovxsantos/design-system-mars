@@ -10,8 +10,7 @@ const componentEntries = [
     { href: '/components/modal', label: 'Modal', id: '05' },
     { href: '/components/select', label: 'Select', id: '06' },
     { href: '/components/checkbox', label: 'Checkbox & Radio', id: '07' },
-    { href: '/components/tabs', label: 'Tabs', id: '08' },
-    { href: '/components/toast', label: 'Toast', id: '09' },
+    { href: '/components/toast', label: 'Toast', id: '08' },
 ];
 
 export default function HomePage() {

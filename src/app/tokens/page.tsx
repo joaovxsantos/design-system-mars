@@ -1,3 +1,4 @@
+import { ComponentsPage } from '@/src/components/ComponentsPage/ComponentsPage';
 import styles from './tokens.module.scss';
 
 const colorGroups = [
@@ -55,57 +56,54 @@ const spacingTokens = [
 
 
 export default function TokensPage() {
-    return (
-        <main className={styles.page}>
-            <h1>Tokens</h1>
 
-            <section>
-                <h2>Cores</h2>
-                {colorGroups.map((group) => (
-                    <div key={group.name} className={styles.group}>
-                        <h3>{group.name}</h3>
-                        <div className={styles.swatchRow}>
-                            {group.tokens.map((token) => (
-                                <div key={token.name} className={styles.swatch}>
-                                    <div
-                                        className={styles.swatchColor}
-                                        style={{ backgroundColor: `var(${token.name})` }}
-                                    />
-                                    <span className={styles.swatchLabel}>{token.label}</span>
-                                </div>
-                            ))}
-                        </div>
+    const allDataTokens = [
+        {
+            nameSec: 'Cores',
+            items: <> {colorGroups.map((group) => (
+                <div key={group.name} className={styles.group}>
+                    <h3>{group.name}</h3>
+                    <div className={styles.swatchRow}>
+                        {group.tokens.map((token) => (
+                            <div key={token.name} className={styles.swatch}>
+                                <div
+                                    className={styles.swatchColor}
+                                    style={{ backgroundColor: `var(${token.name})` }}
+                                />
+                                <span className={styles.swatchLabel}>{token.label}</span>
+                            </div>
+                        ))}
                     </div>
-                ))}
-            </section>
-
-            <section>
-                <h2>Tipografia</h2>
-                {fontSamples.map((sample) => (
-                    <p
-                        key={sample.label}
-                        className={styles.fontSample}
-                        style={{ fontFamily: sample.family }}
-                    >
-                        {sample.label} — Aa Bb Cc 123
-                    </p>
-                ))}
-            </section>
-
-            <section>
-                <h2>Espaçamento</h2>
-                <div className={styles.spacingList}>
-                    {spacingTokens.map((token) => (
-                        <div key={token.name} className={styles.spacingRow}>
-                            <span className={styles.spacingLabel}>{token.label}</span>
-                            <div
-                                className={styles.spacingBar}
-                                style={{ width: `var(${token.name})` }}
-                            />
-                        </div>
-                    ))}
                 </div>
-            </section>
-        </main>
+            ))}</>
+        },
+        {
+            nameSec: 'Tipografia',
+            items: <> {fontSamples.map((sample) => (
+                <p
+                    key={sample.label}
+                    className={styles.fontSample}
+                    style={{ fontFamily: sample.family }}
+                >
+                    {sample.label} — Aa Bb Cc 123
+                </p>
+            ))}</>
+        },
+        {
+            nameSec: 'Espaçamento',
+            items: <div className={styles.spacingList}>            {spacingTokens.map((token) => (
+                <div key={token.name} className={styles.spacingRow}>
+                    <span className={styles.spacingLabel}>{token.label}</span>
+                    <div
+                        className={styles.spacingBar}
+                        style={{ width: `var(${token.name})` }}
+                    />
+                </div>
+            ))}</div>
+        }
+    ]
+
+    return (
+        <ComponentsPage title='Tokens' allData={allDataTokens} column={true} />
     );
 }
