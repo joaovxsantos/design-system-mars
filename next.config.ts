@@ -4,4 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+module.exports = {
+  transpilePackages: ["design-system-mars"],
+};
+
 export default nextConfig;
