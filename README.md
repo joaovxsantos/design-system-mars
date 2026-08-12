@@ -2,7 +2,7 @@
 
 Um sistema de tokens e componentes reutilizáveis, construído como peça de portfolio, documentado como uma ficha de catálogo, onde cada componente carrega sua referência, suas variações e o raciocínio por trás das decisões técnicas.
 
-🔗 [Demo ao vivo](#) · 🔗 [Portfolio](#)
+🔗 [Demo ao vivo](https://design-system-mars.vercel.app/)
 
 ## Stack
 
